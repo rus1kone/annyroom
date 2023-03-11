@@ -1,0 +1,141 @@
+.header {
+    min-height: 100vh;
+
+    &__top {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        z-index: 100;
+    }
+
+    &__content {
+        display: flex;
+    }
+
+    &__body {
+        margin-left: 19%;
+        padding-top: 80px;
+    }
+
+    &__body-title {
+        font-weight: 400;
+        font-size: 130px;
+        line-height: 124.79%;
+        font-family: 'Bilbo';
+        opacity: 0;
+        transform: translateY(50%);
+        transition: all .7s ease 0s;
+
+        span {
+            display: block;
+            padding-left: 150px;
+        }
+    }
+
+    &__body-title._active {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    &__body-text {
+        font-family: 'Bilbo';
+        max-width: 380px;
+        font-size: 32px;
+        line-height: 124.79%;
+        margin-left: 150px;
+        opacity: 0;
+        transform: translateY(100%);
+        transition: all .7s ease 0.1s;
+    }
+
+    &__body-text._active {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    &__decor {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        opacity: 0;
+        transform: scale(0.6);
+        transition: all .7s ease 0s;
+    }
+
+    &__decor._active {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    &__button {
+        position: absolute;
+        display: inline-block;
+        bottom: 145px;
+        right: 155px;
+        border: 1px solid #000000;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.5);
+        transition: all .3s ease 0s;
+
+        &:hover {
+            background: linear-gradient(90deg, #A862BA 8.88%, rgba(255, 255, 255, 0) 113.33%);
+        }
+
+        img {
+            padding: 30px 22px;
+        }
+    }
+}
+
+.menu {
+
+    &__list {
+        display: flex;
+        column-gap: 65px;
+    }
+
+    &__list-link {
+        font-size: 24px;
+        line-height: 124.79%;
+        color: #000;
+        transition: all .3s ease 0s;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #000;
+            left: 0;
+            bottom: -5px;
+            transition: .3s;
+        }
+    }
+
+    &__list-link:hover::after {
+        width: 100%;
+    }
+}
+
+.slider {
+    max-height: 100vh;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all .7s ease 0s;
+    position: absolute;
+    max-width: 826px;
+    top: 0px;
+    left: 0px;
+
+    img {
+        height: 100vh;
+    }
+
+    &._active {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}

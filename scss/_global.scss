@@ -1,0 +1,28 @@
+html,
+body {
+    height: 100%;
+}
+
+// font-family: 'Bilbo', cursive;
+
+body {
+    font-family: 'Assistant', sans-serif;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.menu__list-link--active{
+    font-weight: 700;
+}
+
+.header{
+    background: linear-gradient(270deg, #FFFFFF -27.97%, #FDC5C5 35.6%);
+}
